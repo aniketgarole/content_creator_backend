@@ -5,6 +5,9 @@ const { jokeRouter } = require("./routes/joke.route");
 const { shayariRouter } = require("./routes/shayari.route");
 const { quoteRouter } = require("./routes/quote.route");
 const { storyRouter } = require("./routes/story.route");
+const { convertRouter } = require("./routes/convert.route");
+const { debugRouter } = require("./routes/debug.route");
+const { qualityRouter } = require("./routes/quality.route");
 
 const app = express()
 
@@ -37,6 +40,14 @@ app.use("/", shayariRouter)
 app.use("/", quoteRouter)
 
 app.use("/", storyRouter)
+
+app.use("/", convertRouter)
+
+app.use("/", debugRouter)
+
+app.use("/", qualityRouter)
+
+
 
 
 
